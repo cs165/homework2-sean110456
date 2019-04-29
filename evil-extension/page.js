@@ -27,7 +27,6 @@ function transformTextNodes(node) {
     node.textContent = ls.join(' ');   
   }
   for(const child of node.childNodes){
-    //if(child.nodeName === 'SCRIPT')
     if(child.nodeName==='style' ||child.nodeName==='SCRIPT')
       continue;
     transformTextNodes(child);
